@@ -1,0 +1,214 @@
+/* body{
+    background-color: hsl(0, 0%, 10%);
+}
+.to-do-list{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+h1{
+    font-size: 4rem;
+    color: azure;
+}
+button{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.add-button{
+    background-color: rgb(23, 117, 31);
+    padding: 3px;
+    color: azure;
+}
+.add-button:hover{
+    background-color:  rgb(16, 82, 21);;
+}
+.delete-btn{
+    background-color: #f53b3b;
+}
+.delete-btn:hover{
+    background-color: #bd2525;
+}
+.move-btn{
+    background-color: #3b9bf5;
+}
+.move-btn{
+    background-color: #358de0;
+}
+input[type="text"]{
+    padding: 10px;
+    font-style: 1.6rem;
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+
+}
+ol{
+    padding: 0;
+
+}
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgb(221, 228, 235);
+    margin-bottom: 10px;
+    border: 3px solid rgb(48, 48, 48);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+}
+.text{
+    flex: 1;
+}
+.delete-btn,.move-btn{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left:10px;
+} 
+  */
+  /* Google Font (optional but makes it prettier) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.to-do-list {
+    width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Heading */
+.to-do-list h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Input Section */
+input[type="text"] {
+    width: 60%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+/* Buttons General */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Add Button */
+.add-button {
+    background: linear-gradient(45deg, #00c853, #64dd17);
+    color: white;
+}
+
+.add-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Task List */
+ol {
+    margin-top: 30px;
+    padding: 0;
+}
+
+/* Task Item */
+li {
+    list-style: none;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    flex: 1;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Move Buttons */
+.move-btn {
+    background: linear-gradient(45deg, #2196f3, #21cbf3);
+    color: white;
+    margin-left: 8px;
+}
+
+.move-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .to-do-list {
+        width: 90%;
+        padding: 25px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .add-button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
